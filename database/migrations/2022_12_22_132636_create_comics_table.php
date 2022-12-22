@@ -36,6 +36,3 @@ return new class extends Migration
         Schema::dropIfExists('comics');
     }
 };
-
-
-/* title, description, thumb, price, series, sale_date, type */
