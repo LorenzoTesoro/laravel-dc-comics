@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container py-5 bg-primary">
+<div class="container py-5 bg-primary mt-3">
     <div class="d-flex gap-4 text-white">
         <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
         <div class="details">
