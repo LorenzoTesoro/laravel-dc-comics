@@ -40,7 +40,7 @@ class ComicController extends Controller
      */
     public function store(StoreComicRequest $request)
     {
-        $comic = new Comic();
+        /* $comic = new Comic();
 
         $comic->title = $request['title'];
         $comic->description = $request['description'];
@@ -49,7 +49,11 @@ class ComicController extends Controller
         $comic->series = $request['series'];
         $comic->sale_date = $request['sale_date'];
         $comic->type = $request['type'];
-        $comic->save();
+        $comic->save(); */
+
+        $val_data = $request->validated();
+
+        $comic = Comic::create($val_data);
 
         return to_route('comics.index')->with('message', "$comic->title added successfully");
     }
